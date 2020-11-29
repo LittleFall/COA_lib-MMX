@@ -3,9 +3,9 @@
 
 实现图片淡入淡出效果，要求分别使用普通方法和MMX指令集。
 
-编译环境 cl.exe (MSVC)
+编译环境 windows10 cl.exe (MSVC)
 
-主文件 /work/version3.cpp
+主文件 /src/main.cpp
 
 图片文件 /pic/back-1920-1080-32.bmp,black-1920-1080-32.bmp
 
@@ -15,3 +15,4 @@
 
 
 
+注：不要在汇编代码中添加以 LF 为行结尾的单行注释！

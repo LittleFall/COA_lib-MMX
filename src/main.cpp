@@ -84,7 +84,7 @@ int main(void)
 	HDC hdc = GetDC(NULL);
 	BITMAPINFO *info = (BITMAPINFO*)(buf + 0x0e);
 
-	for(int mmx=0;mmx<2;++mmx)
+	for(int mmx=1;mmx<2;++mmx)
 	{
 		memcpy(buf,buf1,filesize);
 		DWORD start_time =  GetTickCount();

@@ -3,7 +3,7 @@
 
 实现图片淡入淡出效果，要求分别使用普通方法和MMX指令集。
 
-编译环境 windows10 cl.exe (MSVC)
+编译环境 windows10 cl.exe (MSVC)，配置见 https://blog.csdn.net/m0_37809890/article/details/85103109
 
 主文件 /src/main.cpp
 

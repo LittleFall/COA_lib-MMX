@@ -52,14 +52,14 @@ void y_mmx(BYTE *pic1,BYTE *pic2,BYTE *pic,int size,int fade)
 	    __asm
 	    {
 			pxor 		mm0, mm0	  		// 清除mm0
-	        //将所需数据移入寄存器
+	        ; 将所需数据移入寄存器
 	        mov			esi, [p1]			
             mov			edx, [p2]			
             mov			edi, [ptar]
 			movd 		mm1, [esi] 			// UUUU UUUU XXXX XXXX
 			movd 		mm2, [edx]			// UUUU UUUU YYYY YYYY
 
-			//将mm0和mm1解开，构成 00XX 00XX 00XX 00XX形式
+			; 将mm0和mm1解开，构成 00XX 00XX 00XX 00XX形式
 			punpcklbw 	mm1, mm0			// 00XX 00XX 00XX 00XX
 			punpcklbw 	mm2, mm0			// 00YY 00YY 00YY 00YY
 			
@@ -69,7 +69,7 @@ void y_mmx(BYTE *pic1,BYTE *pic2,BYTE *pic,int size,int fade)
 			psrlw		mm1, 8				// 00ZZ 00ZZ 00ZZ 00ZZ
 
 			packuswb 	mm1, mm0 			// 0000 0000 ZZZZ ZZZZ
-			//将结果传回目标位置
+			; 将结果传回目标位置
 			movd		[edi], mm1
 	    }
 	    ++p1, ++p2, ++ptar;
